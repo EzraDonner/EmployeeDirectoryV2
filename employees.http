@@ -15,3 +15,17 @@ GET {{host}}/employees/123
 
 ### Get random employee
 GET {{host}}/employees/random
+
+### Add new employee
+POST {{host}}/employees
+Content-Type: application/json
+
+{
+  "name": "lorem ipsum"
+}
+
+### 400 error if name is not correctly provided
+POST {{host}}/employees
+Content-Type: application/json
+
+{}
